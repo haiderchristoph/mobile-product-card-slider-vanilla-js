@@ -1,0 +1,164 @@
+@use 'variables' as *;
+
+/*
+ * Mobile first approach
+ **/
+
+html {
+  font-family: $font-stack;
+  font-size: 16px;
+}
+body {
+  background-color: #ffffff;
+  padding: 1rem;
+}
+#section-dog-accessories-h2 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  text-align: center;
+}
+.list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+
+  .listItem {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__isMobile {
+    flex-wrap: nowrap;
+
+    /* slider specific */
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+
+    // hide scrollbar
+    -ms-overflow-style: none; /* IE 10+ */
+    scrollbar-width: none; /* Firefox */
+    &::-webkit-scrollbar {
+      width: 0;
+      background: transparent;
+      display: none; /* Safari and Chrome */
+    }
+
+    .listItem {
+      /* snap scroll */
+      scroll-snap-align: start;
+      scroll-snap-stop: always;
+    }
+  }
+}
+.cardLink {
+  text-decoration: none;
+  color: currentColor;
+}
+.cardContainer {
+  background-color: $card-background-color;
+  border-radius: 1rem;
+  width: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 16.5rem;
+  padding: 1.125rem;
+  transition: 0.2s;
+}
+.cardContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.cardTitle {
+  font-weight: 500;
+  font-size: 1.125rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.25rem;
+  color: $card-title-color;
+  word-break: break-word;
+  text-align: center;
+}
+.cardPrice {
+  font-weight: 400;
+  font-size: 1rem;
+  color: $card-price-color;
+}
+
+.cardImage {
+  max-height: 9rem;
+}
+
+.cardButton {
+  border-radius: 25px;
+  width: 100%;
+  background-color: $card-button-background-color;
+  color: $white;
+  border: 0;
+  padding: 0.75rem 2.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: $font-stack;
+  &:hover {
+    background-color: $card-button-background-color-hover;
+  }
+}
+
+#bar-indicator {
+  height: 5px;
+  background-color: #262626;
+  border-radius: 25px;
+  transition: 0.2s;
+}
+#bar-container {
+  display: flex;
+  width: 100px;
+  height: 5px;
+  background: #dfe4e8;
+  border-radius: 25px;
+  align-items: center;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+@media (min-width: $breakpoint-lg) {
+  .cardContainer {
+    width: 12rem;
+    height: 18.5rem;
+  }
+  .cardButton {
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+  }
+  .cardImage {
+    max-height: 11rem;
+  }
+  .cardTitle {
+    font-size: 1.125rem;
+  }
+  .cardPrice {
+    font-size: 1rem;
+  }
+  section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
