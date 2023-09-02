@@ -14,7 +14,7 @@ Run `yarn run start` to start the webpack dev server. The project should be serv
 
 ## Build
 
-Run `yarn run build` to build the project and generat the `/dist` folder. From there you can deploy the app.
+Run `yarn run build` to build the project and generat the `/build` folder. From there you can deploy the app.
 
 ## Deployment using GitHub actions
 
