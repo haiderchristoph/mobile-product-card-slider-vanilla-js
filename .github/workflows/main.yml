@@ -22,9 +22,9 @@ jobs:
         run: find build/ -print
 
       - name: 📂 Sync files
-        uses: SamKirkland/FTP-Deploy-Action@3.1.1
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          ftp-server: ftp.world4you.com
-          ftp-username: ${{ secrets.FTP_USER }}
-          ftp-password: ${{ secrets.FTP_PWD }}
+          server: ftp.world4you.com
+          username: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PWD }}
           local-dir: build/
