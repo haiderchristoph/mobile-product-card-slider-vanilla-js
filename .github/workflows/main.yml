@@ -26,5 +26,5 @@ jobs:
         with:
           ftp-server: ftpes://ftp.world4you.com
           ftp-username: ${{ secrets.FTP_USER }}
-          ftp-password: ${{ secrets.FTP_PASSWORD }}
+          ftp-password: ${{ secrets.FTP_PWD }}
           local-dir: build/
