@@ -23,16 +23,4 @@ const isMobile = () => {
   return hasTouchScreen
 }
 
-let throttleTimer
-const throttle = (callback, time) => {
-  if (throttleTimer) return
-
-  throttleTimer = true
-
-  setTimeout(() => {
-    callback()
-    throttleTimer = false
-  }, time)
-}
-
-export { isMobile, throttle }
+export { isMobile }
