@@ -1,11 +1,10 @@
-import { isMobile, throttle } from '../../utils'
-import { SLIDE_BAR_SIZE } from '../../constants'
-import { createSlideBar, updateSlideBarIndicator } from '../SlideBar'
+import { isMobile } from 'utils/isMobile'
+import { throttle } from 'utils/throttle'
+import { SLIDE_BAR_SIZE } from 'utils/constants'
+import { createSlideBar, updateSlideBarIndicator } from 'components/SlideBar'
 
 function createListItem(item) {
   const { id, src, link, title, price } = item
-  // ToDo:
-  // add id, aria attributes, type, title, alt
 
   // containers
   const liElement = document.createElement('li')
@@ -63,7 +62,7 @@ function createListItem(item) {
   return liElement
 }
 
-function renderListIntoContainer(selector, items) {
+function renderProductCardListIntoContainer(selector, items) {
   const containerElement = document.querySelector(selector)
 
   const ulElement = document.createElement('ul')
@@ -94,4 +93,4 @@ function renderListIntoContainer(selector, items) {
   }
 }
 
-export { renderListIntoContainer }
+export { renderProductCardListIntoContainer }

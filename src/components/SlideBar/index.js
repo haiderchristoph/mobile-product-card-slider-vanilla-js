@@ -1,4 +1,4 @@
-import { SLIDE_BAR_SIZE } from '../../constants'
+import { SLIDE_BAR_SIZE } from 'utils/constants'
 const updateSlideBarIndicator = (event, itemsCount) => {
   const scrollLeft = event.target.scrollLeft
   const scrollWidth = event.target.scrollWidth - event.target.clientWidth
