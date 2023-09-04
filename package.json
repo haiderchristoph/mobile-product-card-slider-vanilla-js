@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack serve --open --config webpack.dev.js",
     "build": "npm run lint && webpack --config webpack.prod.js",
-    "lint": "eslint **/src/**/*.ts --no-cache"
+    "lint": "npx eslint **/src/**/*.ts --no-cache"
   },
   "author": "Christoph Haider",
   "license": "ISC",
