@@ -21,7 +21,7 @@ const createListItem = (item: ProductListItem) => {
   linkElement.classList.add('cardLink')
 
   // content
-  // ToDo: image sizes for different screen sizes, maybe use <picture />
+  // ToDo: image sizes for different screen sizes, maybe use <picture /> with different srcset for that
   const cardContentElement = document.createElement('div')
   cardContentElement.classList.add('cardContent')
 
@@ -34,6 +34,9 @@ const createListItem = (item: ProductListItem) => {
   titleElement.classList.add('cardTitle')
   titleElement.textContent = title
   titleElement.ariaLabel = title
+  // ToDo: title allows browsers to spawn a built in tooltip for long text
+  // ideally, would be great to add a proper tooltip (not in vanilla JS without 3rd party access though)
+  titleElement.title = title
 
   const priceElement = document.createElement('span')
   priceElement.textContent = price
@@ -48,14 +51,11 @@ const createListItem = (item: ProductListItem) => {
   buttonElement.ariaLabel = buttonTitle
 
   // assemble
-  cardContentElement.appendChild(imgElement)
   cardContentElement.appendChild(titleElement)
   cardContentElement.appendChild(priceElement)
-  cardContentElement.appendChild(buttonElement)
 
-  linkElement.appendChild(cardContentElement)
-
-  cardContainerElement.appendChild(linkElement)
+  cardContainerElement.appendChild(imgElement)
+  cardContainerElement.appendChild(cardContentElement)
   cardContainerElement.appendChild(buttonElement)
 
   liElement.appendChild(cardContainerElement)
@@ -86,9 +86,9 @@ function renderProductCardListIntoContainer(
     slideBarWrapper.appendChild(slideBar)
 
     containerElement.appendChild(slideBarWrapper)
-    // attach event listener to scroll event of the list
-
     ulElement.classList.add('list__isMobile')
+
+    // attach event listener to scroll event of the list
     ulElement.addEventListener('scroll', (event) => {
       throttle(() => {
         updateSlideBarIndicator(event, items.length)

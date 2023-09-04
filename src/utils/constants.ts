@@ -13,7 +13,7 @@ const items: ProductListItem[] = [
     id: 'tractive-gps-dog-4-spare-charger-2',
     src: '/assets/tractive-gps-dog-4-spare-charger.png',
     link: '/assets/tractive-gps-dog-4-spare-charger.png',
-    title: 'Clip x3',
+    title: 'Clip XL x3',
     price: '€ 9.99',
   },
   {
@@ -27,7 +27,8 @@ const items: ProductListItem[] = [
     id: 'tractive-gps-dog-4-spare-charger-4',
     src: '/assets/tractive-gps-dog-4-spare-charger.png',
     link: '/assets/tractive-gps-dog-4-spare-charger.png',
-    title: 'Spare Charging Cable',
+    title:
+      'Spare Charging Cable Super Way Too Long Title Come On Stop Already This Is Too Much',
     price: '€ 9.99',
   },
 ]
