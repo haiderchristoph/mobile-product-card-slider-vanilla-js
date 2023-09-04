@@ -2,8 +2,9 @@ import { isMobile } from 'utils/isMobile'
 import { throttle } from 'utils/throttle'
 import { SLIDE_BAR_SIZE } from 'utils/constants'
 import { createSlideBar, updateSlideBarIndicator } from 'components/SlideBar'
+import { ProductListItem } from 'utils/types/Item'
 
-function createListItem(item) {
+const createListItem = (item: ProductListItem) => {
   const { id, src, link, title, price } = item
 
   // containers
@@ -62,7 +63,10 @@ function createListItem(item) {
   return liElement
 }
 
-function renderProductCardListIntoContainer(selector, items) {
+function renderProductCardListIntoContainer(
+  selector: string,
+  items: ProductListItem[]
+) {
   const containerElement = document.querySelector(selector)
 
   const ulElement = document.createElement('ul')
