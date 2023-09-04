@@ -7,10 +7,9 @@
 
 # Mobile Product Card Slider
 
-A demo project to showcase a mobile product card slider built with plain vanilla JavaScript, TypeScript and SASS. Bundled using Webpack.
-For pretty and valid code, also Prettier and es-lint was used.
+A demo project to showcase a mobile product card slider built with vanilla JavaScript, TypeScript and SASS. Bundled using Webpack. To ensure pretty and valid code, also Prettier and ESlint are configured.
 
-The slider is only shown on mobile device (or mobile emulators with touchevent features _wink_ Chrome Dev Tools _wink_).
+The slider is only shown on mobile devices (or mobile emulators with touchevent feature enabled, like Chrome Dev Tools).
 
 Checkout the [Live Demo](https://tractivedemo.versusreality.at/)
 
