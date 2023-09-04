@@ -1,7 +1,9 @@
 import { SLIDE_BAR_SIZE } from 'utils/constants'
-const updateSlideBarIndicator = (event, itemsCount) => {
-  const scrollLeft = event.target.scrollLeft
-  const scrollWidth = event.target.scrollWidth - event.target.clientWidth
+
+const updateSlideBarIndicator = (event: Event, itemsCount: number) => {
+  const target = event.target as HTMLElement
+  const scrollLeft = target.scrollLeft
+  const scrollWidth = target.scrollWidth - target.clientWidth
   const scrolled = (scrollLeft / scrollWidth) * 100
 
   // calculate the bar indicator size based on the items
@@ -20,10 +22,10 @@ const updateSlideBarIndicator = (event, itemsCount) => {
 }
 
 const getBarIndicatorTranslateValue = (
-  scrolled, // number in percent
-  barIndicatorSize, // number
-  barSize
-) => {
+  scrolled: number,
+  barIndicatorSize: number,
+  barSize: number
+): number => {
   // keep within bar container boundaries
   if (scrolled - barIndicatorSize <= 0) return 0
   if (scrolled - barIndicatorSize >= barSize) return barSize - barIndicatorSize
@@ -32,7 +34,7 @@ const getBarIndicatorTranslateValue = (
   return scrolled - barIndicatorSize
 }
 
-const createSlideBar = (barSize, itemsCount) => {
+const createSlideBar = (barSize: number, itemsCount: number): HTMLElement => {
   const barContainerElement = document.createElement('div')
   barContainerElement.id = 'bar-container'
   barContainerElement.style.width = `${barSize}px`

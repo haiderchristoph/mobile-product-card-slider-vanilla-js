@@ -1,5 +1,7 @@
+import { ProductListItem } from './types/Item'
+
 const SLIDE_BAR_SIZE = 100
-const items = [
+const items: ProductListItem[] = [
   {
     id: 'tractive-gps-dog-4-spare-charger-1',
     src: '/assets/tractive-gps-dog-4-spare-charger.png',

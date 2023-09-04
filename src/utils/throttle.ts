@@ -1,5 +1,5 @@
-let throttleTimer
-const throttle = (callback, time) => {
+let throttleTimer: boolean
+const throttle = (callback: () => void, time: number) => {
   if (throttleTimer) return
 
   throttleTimer = true
