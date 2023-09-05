@@ -7,23 +7,21 @@
 
 # Mobile Product Card Slider
 
-A demo project to showcase a mobile product card slider built with vanilla JavaScript, TypeScript and SASS. Bundled using Webpack. To ensure pretty and valid code, also Prettier and ESlint are configured.
+Demo project to showcase a mobile product card slider built with vanilla JavaScript, TypeScript and SASS. Bundled using Webpack. To ensure pretty and valid code, also Prettier and ESlint are configured.
 
-The slider is only shown on mobile devices (or mobile emulators with touchevent feature enabled, like Chrome Dev Tools).
+The slider is only shown on mobile devices (or mobile emulators with touchevent feature enabled, like Chrome Dev Tools). If you switch between devices make sure to reload the page.
 
 Checkout the [Live Demo](https://tractivedemo.versusreality.at/)
 
 ## Gettings started
 
-Use `yarn install` in the root folder install all dependencies.
+Use `yarn install` in the root folder to install all dependencies.
 
 Use `yarn run start` to start the webpack dev server. The project should be served on `localhost:8080`
 
-Use `yarn run lint` to run lint the files inside `src/`
+Use `yarn run lint` to lint the files inside `src/`
 
-## Build
-
-Run `yarn run build` to build the project and generat the `/build` folder. From there you can deploy the app.
+Run `yarn run build` to build the project and generate the `/build` folder.
 
 ## Deployment using GitHub actions
 
