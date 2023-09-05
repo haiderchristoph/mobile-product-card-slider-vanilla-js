@@ -6,10 +6,10 @@ import { isMobile } from 'utils/isMobile'
 
 document.addEventListener('DOMContentLoaded', function () {
   renderHeadingIntoContainer(
-    '#root',
+    '#dog-accessories',
     isMobile()
       ? 'Complete your dog&nbsp;look'
       : 'You might find those&nbsp;interesting'
   )
-  renderProductCardListIntoContainer('#root', items)
+  renderProductCardListIntoContainer('#dog-accessories', items)
 })

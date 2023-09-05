@@ -15,10 +15,14 @@ const updateSlideBarIndicator = (event: Event, itemsCount: number) => {
     SLIDE_BAR_SIZE
   )
 
+  const barIndicator = target.parentNode.querySelector(
+    '#bar-indicator'
+  ) as HTMLElement
+  barIndicator.style.transform = `translate(${newTranslateValue}px)`
   // update the UI
-  document.getElementById(
-    'bar-indicator'
-  ).style.transform = `translate(${newTranslateValue}px)`
+  // document.getElementById(
+  //   'bar-indicator'
+  // ).style.transform = `translate(${newTranslateValue}px)`
 }
 
 const getBarIndicatorTranslateValue = (
