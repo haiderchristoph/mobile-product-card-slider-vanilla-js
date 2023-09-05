@@ -5,7 +5,7 @@ import { createSlideBar, updateSlideBarIndicator } from 'components/SlideBar'
 import { ProductListItem } from 'utils/types/Item'
 
 const createListItem = (item: ProductListItem) => {
-  const { id, src, link, title, price } = item
+  const { id, src, title, price } = item
 
   // containers
   const liElement = document.createElement('li')
@@ -15,16 +15,11 @@ const createListItem = (item: ProductListItem) => {
   const cardContainerElement = document.createElement('div')
   cardContainerElement.classList.add('cardContainer')
 
-  const linkElement = document.createElement('a')
-  linkElement.href = link
-  linkElement.target = '_blank'
-  linkElement.classList.add('cardLink')
-
   // content
-  // ToDo: image sizes for different screen sizes, maybe use <picture /> with different srcset for that
   const cardContentElement = document.createElement('div')
   cardContentElement.classList.add('cardContent')
 
+  // would be great to have different image sizes for special screen sizes, maybe use <picture /> with different sources for that
   const imgElement = document.createElement('img')
   imgElement.src = src
   imgElement.alt = title
@@ -34,8 +29,8 @@ const createListItem = (item: ProductListItem) => {
   titleElement.classList.add('cardTitle')
   titleElement.textContent = title
   titleElement.ariaLabel = title
-  // ToDo: title allows browsers to spawn a built in tooltip for long text
-  // ideally, would be great to add a proper tooltip (not in vanilla JS without 3rd party access though)
+  // title allows browsers to spawn a built in tooltip for long text that got cut off.
+  // Ideally, it would be great to add a proper tooltip (not in vanilla JS without 3rd party libs though)
   titleElement.title = title
 
   const priceElement = document.createElement('span')

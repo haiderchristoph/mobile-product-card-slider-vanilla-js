@@ -117,6 +117,12 @@ body {
   font-size: $font-size-regular;
   font-weight: 400;
   font-family: $font-stack;
+
+  // get rid of annoying tap highlight
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
   &:hover,
   &:focus {
     background-color: $card-button-background-color-hover;
